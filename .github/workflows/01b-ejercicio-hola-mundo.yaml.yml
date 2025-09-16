@@ -1,0 +1,14 @@
+
+name: 01b-ejercicio-hola-mundo.yaml
+
+on:
+  workflow_dispatch:
+env:
+  NOMBRE: "Antoni"
+
+jobs:
+  hola-nombre:
+    runs-on: ubuntu-latest
+    steps:
+    - name: hola-nombre
+      run: echo "Hola ${{NOMBRE}}"
