@@ -1,0 +1,13 @@
+name: Información del Runner
+
+on:
+  workflow_dispatch:
+jobs:
+  expresiones:
+    runs-on: ubuntu-latest
+    steps:
+    - name: sistema operativo
+      run: 
+        cat /etc/os-release
+    - name: arquitectura runner
+      run: ${{ runner.arch}}	
