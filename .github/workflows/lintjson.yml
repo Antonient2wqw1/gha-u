@@ -1,0 +1,19 @@
+
+name: Lint JSON
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v5
+    - name: Validar versión de Node
+      run: |
+        node --version
+    - name: package json
+      run: |
+        sudo apt-get update && sudo apt-get install -y jsonlint-php
+    - name: validar el fichero
+      run: jsonlint-php package.json
