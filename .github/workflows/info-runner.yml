@@ -10,4 +10,4 @@ jobs:
       run: 
         cat /etc/os-release
     - name: arquitectura runner
-      run: ${{ runner.arch}}	
+      run: "${{ runner.arch }}"	
